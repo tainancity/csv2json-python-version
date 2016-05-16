@@ -15,7 +15,6 @@ def csv_to_json(csv_filename):
         csvReader = csv.reader(open(csv_filename, 'r', newline='', encoding = 'utf-8-sig'), delimiter=',', quotechar='"')
         #test for error
         csvReader_test= csv.reader(open(csv_filename, 'r', newline='', encoding = 'utf-8-sig'), delimiter=',', quotechar='"')
-        csvReader_test=csvReader
         for row_test in csvReader_test:
             break
     except:
@@ -44,8 +43,8 @@ def csv_to_json(csv_filename):
             if i == 1:
                 for j in range(len(row)):
                     subject.append("".join(row[j].split()))#clear to simple string
-                    #print(j)
-                    #print(row[j].strip())
+                    print(j)
+                    print(row[j].strip())
             else:
                 for j in range(len(row)):
                     data.append("".join(row[j].split()))#clear to simple string
